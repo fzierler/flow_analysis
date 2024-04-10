@@ -37,6 +37,7 @@ ensembles = [
 
 path = "/home/fabian/Documents/Lattice/HiRepDIaL/measurements/"
 path = "/media/fabian/HDD#3/DiaLrsync/measurements"
+path = "/home/fabian/Documents/DataDiaL/measurements"
 
 ispath(outputDIR) || mkpath(outputDIR)
 for ensemble in ensembles

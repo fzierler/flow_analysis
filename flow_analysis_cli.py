@@ -9,11 +9,12 @@ def flow_hirep(hirep_file, W0, filename):
     flows = read_flows_hirep(hirep_file)
     Qs = flows.Q_history()
     trajectories = flows.trajectories
-    scale = measure_w0(flows, W0)
+    scale = measure_w0(flows, W0, operator="sym")
+    scale_plaq = measure_w0(flows, W0, operator="plaq")
 
     # Write everything into a csv with that is compatible with the current julia scripts used in the analysis
     f = open(filename, "w")
-    f.write("trajectory,Q (w0 = %s)\n" % scale)
+    f.write("trajectory,Q (w0 = %s)(clover)(w0 = %s)(plaq)\n" % (scale, scale_plaq))
     for i in zip(trajectories, Qs):
         f.write("%s,%s\n" % (i[0], i[1]))
     f.close()
