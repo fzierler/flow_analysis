@@ -19,32 +19,43 @@ function plaquettes_log(file)
     return plaquettes
 end
 
-outputDIR = "outputDiaL"
+outputDIR = "outputDiaL_beta6p45"
 ensembles = [
-    "Lt48Ls20beta6.5mf0.71mas1.01FUN",
-    "Lt64Ls20beta6.5mf0.71mas1.01FUN",
-    "Lt64Ls20beta6.5mf0.70mas1.01FUN",
-    "Lt64Ls32beta6.5mf0.72mas1.01FUN",
-    "Lt80Ls20beta6.5mf0.71mas1.01FUN",
-    "Lt96Ls20beta6.5mf0.71mas1.01FUN",
-    "Lt48Ls24beta6.45mf0.7mas1.04FUN",
-    "Lt48Ls28beta6.45mf0.7mas1.045FUN",
-    "Lt56Ls32beta6.45mf0.7mas1.05FUN",
-    "Lt56Ls32beta6.45mf0.71mas1.04FUN",
-    "Lt56Ls36beta6.45mf0.718mas1.04FUN",
-    "Lt56Ls36beta6.45mf0.7mas1.055FUN",
+    "measurements/Lt48Ls24beta6.45mf0.7mas1.04FUN",
+    "measurements/Lt48Ls28beta6.45mf0.7mas1.045FUN",
+    "measurements/Lt56Ls32beta6.45mf0.7mas1.05FUN",
+    "measurements/Lt56Ls32beta6.45mf0.71mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.718mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.7mas1.055FUN",
 ]
 
-path = "/home/fabian/Documents/Lattice/HiRepDIaL/measurements/"
-path = "/media/fabian/HDD#3/DiaLrsync/measurements"
-path = "/home/fabian/Documents/DataDiaL/measurements"
+outputDIR = "outputDiaL"
+ensembles = [
+    "measurements/Lt48Ls20beta6.5mf0.71mas1.01FUN",
+    "measurements/Lt64Ls20beta6.5mf0.71mas1.01FUN",
+    "measurements/Lt64Ls20beta6.5mf0.70mas1.01FUN",
+    "measurements/Lt64Ls32beta6.5mf0.72mas1.01FUN",
+    "measurements/Lt80Ls20beta6.5mf0.71mas1.01FUN",
+    "measurements/Lt96Ls20beta6.5mf0.71mas1.01FUN",
+]
+
+outputDIR = "outputDiaLTests"
+ensembles = [
+    "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.99FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.69mas1.01FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.97FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.71mas0.97FUN",
+    ]
+    
+path = "/home/fabian/Documents/DataDiaL/"
+path = "/home/fabian/Dokumente/DataDiaL/"
 
 ispath(outputDIR) || mkpath(outputDIR)
 for ensemble in ensembles
     @show ensemble
  
     hirep_file = joinpath(path,"$ensemble/out/out_flow")
-    output_file = joinpath(outputDIR,ensemble*"_flow")
+    output_file = joinpath(outputDIR,basename(ensemble)*"_flow")
     run_flow_analysis(hirep_file,output_file)
 
     # now get the plaquette
