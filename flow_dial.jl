@@ -41,10 +41,18 @@ ensembles = [
 
 outputDIR = "outputDiaLTests"
 ensembles = [
+    "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.97FUN",
     "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.99FUN",
     "measurementsTests/Lt64Ls16beta6.55mf0.69mas1.01FUN",
     "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.97FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.99FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.70mas1.01FUN",
     "measurementsTests/Lt64Ls16beta6.55mf0.71mas0.97FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.71mas0.99FUN",
+    "measurementsTests/Lt64Ls16beta6.55mf0.71mas1.01FUN",
+    "measurementsTests/Lt96Ls32beta6.5mf0.71mas1.02FUN",
+    "measurementsTests/Lt96Ls32beta6.45mf0.718mas1.04FUN",
+    "measurementsTests/Lt96Ls40beta6.45mf0.722mas1.04FUN",
     ]
     
 path = "/home/fabian/Documents/DataDiaL/"
