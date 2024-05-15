@@ -1,9 +1,9 @@
 using DelimitedFiles
-function run_flow_analysis(logfile,outfile)
+function run_flow_analysis(logfile,outfile;W0=0.28125)
     try
-        run(`python flow_analysis_cli.py $logfile $outfile`)
+        run(`python flow_analysis_cli.py $logfile $outfile $W0`)
     catch
-        run(`python3 flow_analysis_cli.py $logfile $outfile`)
+        run(`python3 flow_analysis_cli.py $logfile $outfile $W0`)
     end
 end
 function plaquettes_log(file)
@@ -55,8 +55,8 @@ ensembles = [
     "measurementsTests/Lt96Ls40beta6.45mf0.722mas1.04FUN",
     ]
     
-path = "/home/fabian/Documents/DataDiaL/"
 path = "/home/fabian/Dokumente/DataDiaL/"
+path = "/home/fabian/Documents/DataDiaL/"
 
 ispath(outputDIR) || mkpath(outputDIR)
 for ensemble in ensembles

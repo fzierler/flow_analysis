@@ -30,5 +30,5 @@ elif len(args)==3:
 elif len(args)>3:
     hirep_file  = args[1]
     output_file = args[2] 
-    W0 = args[3]
+    W0 = float(args[3])
     flow_hirep(hirep_file, W0, output_file)
