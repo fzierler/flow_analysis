@@ -64,11 +64,12 @@ ensembles = [
         "measurementsTests/Lt64Ls20beta6.55mf0.69mas1.01FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.70mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.70mas0.99FUN",
-        "measurementsTests/Lt64Ls20beta6.55mf0.70mas1.01FUN",
+        #"measurementsTests/Lt64Ls20beta6.55mf0.70mas1.01FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.71mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.71mas0.99FUN",
-        "measurementsTests/Lt64Ls20beta6.55mf0.71mas1.01FUN",
+        #"measurementsTests/Lt64Ls20beta6.55mf0.71mas1.01FUN",
 ]
+
 
 path = "/home/fabian/Dokumente/DataDiaL/"
 path = "/home/fabian/Documents/DataDiaL/"
