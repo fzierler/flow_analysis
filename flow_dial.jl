@@ -19,15 +19,6 @@ function plaquettes_log(file)
     return plaquettes
 end
 
-outputDIR = "outputDiaL_beta6p45"
-ensembles = [
-    "measurements/Lt48Ls24beta6.45mf0.7mas1.04FUN",
-    "measurements/Lt48Ls28beta6.45mf0.7mas1.045FUN",
-    "measurements/Lt56Ls32beta6.45mf0.7mas1.05FUN",
-    "measurements/Lt56Ls32beta6.45mf0.71mas1.04FUN",
-    "measurements/Lt56Ls36beta6.45mf0.718mas1.04FUN",
-    "measurements/Lt56Ls36beta6.45mf0.7mas1.055FUN",
-]
 
 outputDIR = "outputDiaL"
 ensembles = [
@@ -70,6 +61,15 @@ ensembles = [
         #"measurementsTests/Lt64Ls20beta6.55mf0.71mas1.01FUN",
 ]
 
+outputDIR = "outputDiaL_beta6p45"
+ensembles = [
+    "measurements/Lt48Ls24beta6.45mf0.7mas1.04FUN",
+    "measurements/Lt48Ls28beta6.45mf0.7mas1.045FUN",
+    "measurements/Lt56Ls32beta6.45mf0.7mas1.05FUN",
+    "measurements/Lt56Ls32beta6.45mf0.71mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.718mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.7mas1.055FUN",
+]
 
 path = "/home/fabian/Dokumente/DataDiaL/"
 path = "/home/fabian/Documents/DataDiaL/"
