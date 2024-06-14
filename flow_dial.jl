@@ -19,9 +19,17 @@ function plaquettes_log(file)
     return plaquettes
 end
 
-
 outputDIR = "outputDiaL"
+W0=0.2815
 ensembles = [
+    "measurements/Lt48Ls24beta6.45mf0.7mas1.04FUN",
+    "measurements/Lt48Ls28beta6.45mf0.7mas1.045FUN",
+    "measurements/Lt56Ls32beta6.45mf0.7mas1.05FUN",
+    "measurements/Lt56Ls32beta6.45mf0.71mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.718mas1.04FUN",
+    "measurements/Lt56Ls36beta6.45mf0.7mas1.055FUN",
+    "measurements/Lt96Ls20beta6.5mf0.69mas1.01FUN",
+    "measurements/Lt96Ls32beta6.5mf0.73mas1.01FUN",
     "measurements/Lt48Ls20beta6.5mf0.71mas1.01FUN",
     "measurements/Lt64Ls20beta6.5mf0.71mas1.01FUN",
     "measurements/Lt64Ls20beta6.5mf0.70mas1.01FUN",
@@ -33,48 +41,32 @@ ensembles = [
 outputDIR = "outputDiaLTests"    
 W0=0.2815
 ensembles = [
-    "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.97FUN",
-    "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.99FUN",
-    #"measurementsTests/Lt64Ls16beta6.55mf0.69mas1.01FUN",
-    "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.97FUN",
-    "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.99FUN",
-    #"measurementsTests/Lt64Ls16beta6.55mf0.70mas1.01FUN",
-    "measurementsTests/Lt64Ls16beta6.55mf0.71mas0.97FUN",
-    #"measurementsTests/Lt64Ls16beta6.55mf0.71mas0.99FUN",
-    #"measurementsTests/Lt64Ls16beta6.55mf0.71mas1.01FUN",
-    #"measurementsTests/Lt96Ls32beta6.5mf0.71mas1.02FUN",
-    #"measurementsTests/Lt96Ls32beta6.45mf0.718mas1.04FUN",
-    #"measurementsTests/Lt96Ls40beta6.45mf0.722mas1.04FUN",
-]
-
-outputDIR = "outputDiaLTests"    
-W0=0.2815
-ensembles = [
+        "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.97FUN",
+        "measurementsTests/Lt64Ls16beta6.55mf0.69mas0.99FUN",
+        "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.97FUN",
+        "measurementsTests/Lt64Ls16beta6.55mf0.70mas0.99FUN",
+        "measurementsTests/Lt64Ls16beta6.55mf0.71mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.69mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.69mas0.99FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.69mas1.01FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.70mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.70mas0.99FUN",
-        #"measurementsTests/Lt64Ls20beta6.55mf0.70mas1.01FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.71mas0.97FUN",
         "measurementsTests/Lt64Ls20beta6.55mf0.71mas0.99FUN",
-        #"measurementsTests/Lt64Ls20beta6.55mf0.71mas1.01FUN",
-]
-
-outputDIR = "outputDiaL_beta6p45"
-ensembles = [
-    "measurements/Lt48Ls24beta6.45mf0.7mas1.04FUN",
-    "measurements/Lt48Ls28beta6.45mf0.7mas1.045FUN",
-    "measurements/Lt56Ls32beta6.45mf0.7mas1.05FUN",
-    "measurements/Lt56Ls32beta6.45mf0.71mas1.04FUN",
-    "measurements/Lt56Ls36beta6.45mf0.718mas1.04FUN",
-    "measurements/Lt56Ls36beta6.45mf0.7mas1.055FUN",
+        "measurementsTests/Lt64Ls24beta6.55mf0.69mas1.01FUN",
+        "measurementsTests/Lt64Ls24beta6.55mf0.70mas0.99FUN",
+        "measurementsTests/Lt64Ls28beta6.55mf0.70mas1.01FUN",
+        "measurementsTests/Lt64Ls24beta6.55mf0.71mas0.99FUN",
+        "measurementsTests/Lt64Ls28beta6.55mf0.71mas1.01FUN",
+        "measurementsTests/Lt96Ls32beta6.45mf0.718mas1.04FUN",
+        "measurementsTests/Lt96Ls32beta6.5mf0.71mas1.02FUN",
 ]
 
 path = "/home/fabian/Dokumente/DataDiaL/"
 path = "/home/fabian/Documents/DataDiaL/"
+path = "/home/fabian/Documents/Physics/Data/DataDiaL/"
 
-ispath(outputDIR) || mkpath(outputDIR)
+ispath(outputDIR) || mkpath(outputDIR)  
 for ensemble in ensembles
     @show ensemble
  
